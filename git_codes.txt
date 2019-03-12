@@ -5,4 +5,18 @@ git commit -m “注释” 提交文件添加操作
 
 git status 状态
 git diff 找不同
+提交文件操作：
+1、git status 首先查看那些文件有修改
+2、可以使用git diff查看不同的地方
+3、git add "name"
+4、git commit -m "log" 提交
+
+时光机：版本回退
+git log 可以查看所有的提交记录
+git reset --hard HEAD^ 可以回退到上一个版本；
+git reset --hard HEAD^^ 可以回退到上上一个版本；
+git reset --hard HEAD~100 可以回退到上一百个版本。
+git reset --hard 213u192381(具体id) 可以回到具体的版本
+
+git reflog 查看命令历史，方便确定回到哪个版本
 
