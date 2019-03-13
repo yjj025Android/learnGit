@@ -1,2 +1,3 @@
 use git
 
+uses checkout
