@@ -24,3 +24,15 @@ git reflog 查看命令历史，方便确定回到哪个版本
 git checkout -- file 用来撤销修改，1、文件已经被修改，但未add（放入暂存区），这一步可以退回到文件修改之前的样子，即和版本库中最新的版本一样
 								   2、文件已经被修改，并且已经add，之后再进行了文件修改，此时这一步可以退回到文件add时的文件状态，add之后的文件修改会被撤销
 
+git reset HEAD file 用来将已经存入缓存区的文件撤回到工作区，即将已经add的文件重新变为自己本地上的编辑状态，之后可以使用checkout -- file 丢弃工作区的修改
+
+git checkout -- file也可以将版本库的文件还原至工作区，如：手动删除一个文件后，可以使用git checkout -- file将版本库的文件恢复到最新版本
+其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
+
+git rm file会删除这个文件，加上commit操作之后可以从版本库上删除文件
+
+连接远程库：git remote add origin git@github.com:username/远程仓名.git
+			git push -u origin master
+	将本地库推送到远程仓，使用git push命令，第一次推送时，加上-u参数，之后可以简化命令：
+			git push origin master
+
