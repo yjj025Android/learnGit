@@ -36,3 +36,4 @@ git rm file会删除这个文件，加上commit操作之后可以从版本库上
 	将本地库推送到远程仓，使用git push命令，第一次推送时，加上-u参数，之后可以简化命令：
 			git push origin master
 
+远程库拉取到本地：git clone SSH address
